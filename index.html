@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AuraSkin – Skincare that starts with your skin</title>
+  <meta name="description" content="AuraSkin makes three fragrance-free skincare essentials matched to your skin concern.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Manrope:wght@400;600;800&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p class="promo">Free shipping on orders over $40. Samples with every order.</p>
+
+  <header class="site-header">
+    <a class="brand" href="#top">AuraSkin</a>
+    <nav aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#science">Ingredients</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <button type="button" class="bag" id="bag-btn">Bag <span id="bag-count">0</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="hero" data-theme="dullness">
+      <div class="hero-copy">
+        <h1>Skincare minus the guesswork.</h1>
+        <p class="lead">Tell us what bothers your skin most. We will point you to the one product to start with.</p>
+
+        <p class="ask" id="ask">My main concern is</p>
+        <div class="chips" role="group" aria-labelledby="ask">
+          <button type="button" class="chip" data-concern="dryness" aria-pressed="false">Dryness</button>
+          <button type="button" class="chip" data-concern="oiliness" aria-pressed="false">Oiliness</button>
+          <button type="button" class="chip" data-concern="dullness" aria-pressed="true">Dullness</button>
+          <button type="button" class="chip" data-concern="sensitivity" aria-pressed="false">Sensitivity</button>
+        </div>
+
+        <div class="pick" aria-live="polite">
+          <p class="pick-name" id="pick-name">Start with Halo Serum</p>
+          <p class="pick-why" id="pick-why">Niacinamide evens tone and brings back an even glow within four weeks.</p>
+        </div>
+      </div>
+
+      <div class="stage" aria-hidden="true">
+        <span class="halo"></span>
+        <div class="prod dropper" id="hero-prod"><span class="top"></span><span class="neck"></span><span class="body"><span class="liquid"></span><span class="label"><b>AuraSkin</b><i id="bottle-label">Halo Serum</i></span></span></div>
+      </div>
+    </section>
+
+    <ul class="trust">
+      <li>Fragrance-free</li>
+      <li>Dermatologist tested</li>
+      <li>Vegan formulas</li>
+      <li>Recyclable glass</li>
+    </ul>
+
+    <section class="shop" id="shop" aria-labelledby="shop-title">
+      <h2 id="shop-title">The essentials</h2>
+      <ul class="grid">
+        <li class="card">
+          <div class="bottle b1" aria-hidden="true"><div class="prod pump"><span class="top"></span><span class="neck"></span><span class="body"><span class="liquid"></span><span class="label"><b>AuraSkin</b><i>Dew Cleanser</i></span></span></div></div>
+          <h3>Dew Cleanser</h3>
+          <p>Soft gel wash that lifts sunscreen without tightness.</p>
+          <div class="buy"><span class="price">$18</span><button type="button" class="add" data-name="Dew Cleanser">Add to bag</button></div>
+        </li>
+        <li class="card">
+          <div class="bottle b2" aria-hidden="true"><div class="prod dropper"><span class="top"></span><span class="neck"></span><span class="body"><span class="liquid"></span><span class="label"><b>AuraSkin</b><i>Halo Serum</i></span></span></div></div>
+          <h3>Halo Serum</h3>
+          <p>5% niacinamide and hyaluronic acid for tone and moisture.</p>
+          <div class="buy"><span class="price">$32</span><button type="button" class="add" data-name="Halo Serum">Add to bag</button></div>
+        </li>
+        <li class="card">
+          <div class="bottle b3" aria-hidden="true"><div class="prod tube"><span class="top"></span><span class="neck"></span><span class="body"><span class="liquid"></span><span class="label"><b>AuraSkin</b><i>Veil SPF 50</i></span></span></div></div>
+          <h3>Veil SPF 50</h3>
+          <p>Invisible daily sunscreen that sits well under makeup.</p>
+          <div class="buy"><span class="price">$24</span><button type="button" class="add" data-name="Veil SPF 50">Add to bag</button></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="science" id="science" aria-labelledby="science-title">
+      <h2 id="science-title">What is inside, and how much</h2>
+      <p class="sub">Every active is listed with its real strength.</p>
+      <ul class="bars">
+        <li><span>Niacinamide</span><div class="bar"><i style="width:50%"></i></div><b>5%</b></li>
+        <li><span>Hyaluronic acid</span><div class="bar"><i style="width:20%"></i></div><b>2%</b></li>
+        <li><span>Panthenol</span><div class="bar"><i style="width:10%"></i></div><b>1%</b></li>
+      </ul>
+    </section>
+
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+      <h2 id="reviews-title" class="visually-hidden">Customer reviews</h2>
+      <blockquote>
+        <p>I used to own nine products and trust none of them. Now I use three and my skin is calmer than it has been in years.</p>
+        <footer>Meera K., combination skin, 4.9 out of 5</footer>
+      </blockquote>
+    </section>
+
+    <section class="news" aria-labelledby="news-title">
+      <h2 id="news-title">Get 10% off your first order</h2>
+      <form id="news-form">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <button type="submit" class="submit">Join</button>
+      </form>
+      <p class="note" id="news-note" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>AuraSkin</strong>
+      <p>A demo brand built for a GitHub Actions CI practical.</p>
+    </div>
+    <ul>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#science">Ingredients</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
